@@ -1,12 +1,264 @@
 {
  "schema_version": 1,
- "release": "public-safe",
- "release_note": "Public-safe build: CFD-derived data are not included because their public release has not been confirmed.",
- "data_mode_badge": "CFD replay · saved model predictions",
- "map_cases": [],
- "forecast_cases": [],
- "all_cases": [],
+ "release": "release",
+ "release_note": "Full-data release. Publication of these CFD-derived data, saved predictions and results was approved by the project owner on 2026-11-04.",
+ "data_mode_badge": "CFD replay",
+ "map_cases": [
+  {
+   "case_id": "400W_2LPM",
+   "Q_W": 400.0,
+   "flow_LPM": 2.0,
+   "role": "test",
+   "path": "map/400W_2LPM/meta.json"
+  },
+  {
+   "case_id": "400W_3LPM",
+   "Q_W": 400.0,
+   "flow_LPM": 3.0,
+   "role": "test",
+   "path": "map/400W_3LPM/meta.json"
+  },
+  {
+   "case_id": "300W_2LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 2.0,
+   "role": "validation",
+   "path": "map/300W_2LPM/meta.json"
+  },
+  {
+   "case_id": "300W_3LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 3.0,
+   "role": "calibration (UQ calibration only)",
+   "path": "map/300W_3LPM/meta.json"
+  }
+ ],
+ "forecast_cases": [
+  {
+   "case_id": "600W_3LPM",
+   "Q_W": 600.0,
+   "flow_LPM": 3.0,
+   "role": "test (power extrapolation; dev-exposed)",
+   "path": "forecast/600W_3LPM.json"
+  },
+  {
+   "case_id": "500W_4LPM",
+   "Q_W": 500.0,
+   "flow_LPM": 4.0,
+   "role": "test (power+flow extrapolation; dev-exposed)",
+   "path": "forecast/500W_4LPM.json"
+  },
+  {
+   "case_id": "300W_2LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 2.0,
+   "role": "validation",
+   "path": "forecast/300W_2LPM.json"
+  }
+ ],
+ "coupled_cases": [
+  {
+   "case_id": "600W_3LPM",
+   "Q_W": 600.0,
+   "flow_LPM": 3.0,
+   "role": "forecast test / map train",
+   "path": "coupled/600W_3LPM.json"
+  },
+  {
+   "case_id": "500W_4LPM",
+   "Q_W": 500.0,
+   "flow_LPM": 4.0,
+   "role": "forecast test / map train",
+   "path": "coupled/500W_4LPM.json"
+  }
+ ],
+ "all_cases": [
+  {
+   "case_id": "300W_1LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 1.0,
+   "spatial_role": "train",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "300W_2LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 2.0,
+   "spatial_role": "validation",
+   "temporal_role": "validation",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "300W_3LPM",
+   "Q_W": 300.0,
+   "flow_LPM": 3.0,
+   "spatial_role": "calibration (UQ calibration only)",
+   "temporal_role": "excluded (never loaded)",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "600W_3LPM",
+   "Q_W": 600.0,
+   "flow_LPM": 3.0,
+   "spatial_role": "train",
+   "temporal_role": "test (power extrapolation; dev-exposed)",
+   "prototype_role": "prototype test (temporal held-out, spatial-train overlap); V0 single evaluated case"
+  },
+  {
+   "case_id": "200W_1LPM",
+   "Q_W": 200.0,
+   "flow_LPM": 1.0,
+   "spatial_role": "train",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "200W_2LPM",
+   "Q_W": 200.0,
+   "flow_LPM": 2.0,
+   "spatial_role": "train",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "200W_3LPM",
+   "Q_W": 200.0,
+   "flow_LPM": 3.0,
+   "spatial_role": "train",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "400W_1LPM",
+   "Q_W": 400.0,
+   "flow_LPM": 1.0,
+   "spatial_role": "train",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "400W_2LPM",
+   "Q_W": 400.0,
+   "flow_LPM": 2.0,
+   "spatial_role": "test",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "400W_3LPM",
+   "Q_W": 400.0,
+   "flow_LPM": 3.0,
+   "spatial_role": "test",
+   "temporal_role": "train",
+   "prototype_role": "-"
+  },
+  {
+   "case_id": "500W_4LPM",
+   "Q_W": 500.0,
+   "flow_LPM": 4.0,
+   "spatial_role": "train",
+   "temporal_role": "test (power+flow extrapolation; dev-exposed)",
+   "prototype_role": "prototype test (temporal held-out, spatial-train overlap)"
+  }
+ ],
  "common_heldout_case": null,
- "story": null,
- "sources": []
+ "story": {
+  "map_case": "400W_2LPM",
+  "map_t_s": 300.0,
+  "forecast_case": "600W_3LPM",
+  "forecast_origin_s": 120.5,
+  "horizon_s": 15
+ },
+ "sources": [
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/300W_2LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/300W_2LPM/Tf.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/300W_2LPM/Tmax.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/300W_3LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/300W_3LPM/Tmax.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/400W_2LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/400W_2LPM/Tmax.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/400W_3LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/400W_3LPM/Tmax.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/500W_4LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/500W_4LPM/Tf.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/600W_3LPM/Tavg.csv",
+  "datasets/curated/chip_thermal_benchmark/v1_20261024T173801Z/cases/600W_3LPM/Tf.csv",
+  "experiments/history_forecasting_20261029T150002Z/PROTOCOL_LOCKED.yaml",
+  "experiments/history_forecasting_20261029T150002Z/predictions/EVAL_META.json",
+  "experiments/history_forecasting_20261029T150002Z/predictions/clean/300W_2LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/clean/500W_4LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/clean/600W_3LPM.npz",
+  "experiments/manuscript_evidence_20261104T041149Z/CASE_SPLITS.csv",
+  "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_A_spatial_reconstruction.csv",
+  "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_B_temporal_forecast.csv",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__A_cfd_monitor.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__E_sensor_mean16.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__A_cfd_monitor.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__E_sensor_mean16.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/clean/500W_4LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/clean/600W_3LPM.npz",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_2LPM_fields_K.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_2LPM_times_s.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_3LPM_fields_K.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_3LPM_times_s.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/400W_2LPM_fields_K.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/400W_2LPM_times_s.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/400W_3LPM_fields_K.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/400W_3LPM_times_s.npy",
+  "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/coords_xyz_m.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/configs/sensors.json",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s0/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s0/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s0/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s0/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s1/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s1/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s1/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s1/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s2/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s2/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s2/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s2/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s3/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s3/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s3/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s3/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s4/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s4/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s4/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s4/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s5/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s5/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s5/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s5/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s6/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s6/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s6/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s6/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s7/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s7/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s7/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s7/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s8/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s8/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s8/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s8/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s9/300W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s9/300W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s9/400W_2LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/deeponet__s9/400W_3LPM.npy",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__300W_2LPM.npz",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__300W_3LPM.npz",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__400W_2LPM.npz",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__400W_3LPM.npz",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/geometry.npz"
+ ],
+ "data_version": "d5270640523a"
 }
