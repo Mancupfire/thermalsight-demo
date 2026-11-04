@@ -1,0 +1,12 @@
+{
+ "schema_version": 1,
+ "release": "public-safe",
+ "release_note": "Public-safe build: CFD-derived data are not included because their public release has not been confirmed.",
+ "data_mode_badge": "CFD replay · saved model predictions",
+ "map_cases": [],
+ "forecast_cases": [],
+ "all_cases": [],
+ "common_heldout_case": null,
+ "story": null,
+ "sources": []
+}
