@@ -189,6 +189,24 @@
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/300W_2LPM.npz",
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/500W_4LPM.npz",
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/600W_3LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s0/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s0/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s1/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s1/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s2/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s2/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s0/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s0/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s1/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s1/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s2/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H1_s2/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s0/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s0/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s1/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s1/status.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s2/config.json",
+  "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s2/status.json",
   "experiments/manuscript_evidence_20261104T041149Z/CASE_SPLITS.csv",
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_A_spatial_reconstruction.csv",
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_B_temporal_forecast.csv",
@@ -260,5 +278,5 @@
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__400W_3LPM.npz",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/geometry.npz"
  ],
- "data_version": "d5270640523a"
+ "data_version": "77ae221106e6"
 }
