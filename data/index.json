@@ -279,6 +279,8 @@
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_A_spatial_reconstruction.csv",
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_B_temporal_forecast.csv",
   "experiments/sparse_it_transfer_20261107T043621Z/SENSOR_BUDGET_RESULTS.csv",
+  "experiments/sparse_it_transfer_20261107T043621Z/audit/A4_lti_provenance.csv",
+  "experiments/sparse_it_transfer_20261107T043621Z/audit/A5_transfer_persistence.csv",
   "experiments/sparse_it_transfer_20261107T043621Z/configs/forecast_protocol.json",
   "experiments/sparse_it_transfer_20261107T043621Z/configs/lti_profile_protocol.json",
   "experiments/sparse_it_transfer_20261107T043621Z/configs/sparse_protocol.json",
@@ -405,5 +407,5 @@
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__400W_3LPM.npz",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/geometry.npz"
  ],
- "data_version": "fe0d94d68319"
+ "data_version": "2021a691ff65"
 }
