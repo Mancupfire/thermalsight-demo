@@ -163,6 +163,66 @@
   }
  ],
  "common_heldout_case": null,
+ "overview_default": "pair_400W_2LPM__600W_3LPM",
+ "overview_cases": [
+  {
+   "id": "same_300W_2LPM",
+   "mode": "same_run",
+   "map": {
+    "case_id": "300W_2LPM",
+    "Q_W": 300.0,
+    "flow_LPM": 2.0,
+    "role": "validation",
+    "path": "map/300W_2LPM_origins/meta.json"
+   },
+   "forecast": {
+    "case_id": "300W_2LPM",
+    "Q_W": 300.0,
+    "flow_LPM": 2.0,
+    "role": "validation",
+    "path": "forecast/300W_2LPM.json"
+   },
+   "note": "One CFD run evaluated by both models (validation run of both: used for model selection, so errors may be optimistic). Map frames are exported at the forecast origins, so every panel shows the same timestamp."
+  },
+  {
+   "id": "pair_400W_2LPM__600W_3LPM",
+   "mode": "separate",
+   "map": {
+    "case_id": "400W_2LPM",
+    "Q_W": 400.0,
+    "flow_LPM": 2.0,
+    "role": "test",
+    "path": "map/400W_2LPM/meta.json"
+   },
+   "forecast": {
+    "case_id": "600W_3LPM",
+    "Q_W": 600.0,
+    "flow_LPM": 3.0,
+    "role": "test (power extrapolation; dev-exposed)",
+    "path": "forecast/600W_3LPM.json"
+   },
+   "note": "Separate evaluation cases: the map and the forecast come from two different CFD runs (each is a test run of its own model). They are not one device and do not share a timestamp."
+  },
+  {
+   "id": "pair_400W_3LPM__500W_4LPM",
+   "mode": "separate",
+   "map": {
+    "case_id": "400W_3LPM",
+    "Q_W": 400.0,
+    "flow_LPM": 3.0,
+    "role": "test",
+    "path": "map/400W_3LPM/meta.json"
+   },
+   "forecast": {
+    "case_id": "500W_4LPM",
+    "Q_W": 500.0,
+    "flow_LPM": 4.0,
+    "role": "test (power+flow extrapolation; dev-exposed)",
+    "path": "forecast/500W_4LPM.json"
+   },
+   "note": "Separate evaluation cases: the map and the forecast come from two different CFD runs (each is a test run of its own model). They are not one device and do not share a timestamp."
+  }
+ ],
  "story": {
   "map_case": "400W_2LPM",
   "map_t_s": 300.0,
@@ -189,6 +249,12 @@
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/300W_2LPM.npz",
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/500W_4LPM.npz",
   "experiments/history_forecasting_20261029T150002Z/predictions/clean/600W_3LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.1/300W_2LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.1/500W_4LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.1/600W_3LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.5/300W_2LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.5/500W_4LPM.npz",
+  "experiments/history_forecasting_20261029T150002Z/predictions/noise0.5/600W_3LPM.npz",
   "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s0/config.json",
   "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s0/status.json",
   "experiments/history_forecasting_20261029T150002Z/runs/final/H0_s1/config.json",
@@ -207,17 +273,32 @@
   "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s1/status.json",
   "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s2/config.json",
   "experiments/history_forecasting_20261029T150002Z/runs/final/H2_s2/status.json",
+  "experiments/history_forecasting_20261029T150002Z/src/hf_forecast.py",
   "experiments/manuscript_evidence_20261104T041149Z/CASE_SPLITS.csv",
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_A_spatial_reconstruction.csv",
   "experiments/manuscript_evidence_20261104T041149Z/metrics/TABLE_B_temporal_forecast.csv",
+  "experiments/spatial_transient_prototype_20261102T165321Z/configs/prototype_config.json",
+  "experiments/spatial_transient_prototype_20261102T165321Z/metrics/cfd_robustness_vs_clean.csv",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/bias_+0.10K_sensor_pos0/500W_4LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/bias_+0.10K_sensor_pos0/600W_3LPM__C_deeponet_ens.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__A_cfd_monitor.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__C_deeponet_ens.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/500W_4LPM__E_sensor_mean16.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__A_cfd_monitor.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__C_deeponet_ens.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/clean/600W_3LPM__E_sensor_mean16.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/gauss_0.05K/500W_4LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/gauss_0.05K/600W_3LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/gauss_0.10K/500W_4LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/forecasts/gauss_0.10K/600W_3LPM__C_deeponet_ens.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/bias_+0.10K_sensor_pos0/500W_4LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/bias_+0.10K_sensor_pos0/600W_3LPM.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/clean/500W_4LPM.npz",
   "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/clean/600W_3LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/gauss_0.05K/500W_4LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/gauss_0.05K/600W_3LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/gauss_0.10K/500W_4LPM.npz",
+  "experiments/spatial_transient_prototype_20261102T165321Z/predictions/mean_histories/gauss_0.10K/600W_3LPM.npz",
   "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_2LPM_fields_K.npy",
   "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_2LPM_times_s.npy",
   "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/300W_3LPM_fields_K.npy",
@@ -228,6 +309,7 @@
   "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/400W_3LPM_times_s.npy",
   "projects/temperature_2d_reconstruction/data/processed/v2_ed0cfb248cfd/coords_xyz_m.npy",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/configs/sensors.json",
+  "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/metrics/uncertainty/ensemble_uncalibrated.csv",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/300W_2LPM.npy",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/300W_3LPM.npy",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/baseline__linear/400W_2LPM.npy",
@@ -278,5 +360,5 @@
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/ensemble__deeponet__400W_3LPM.npz",
   "projects/temperature_2d_reconstruction/runs/interpolation_v2_20261024T180225Z/predictions/geometry.npz"
  ],
- "data_version": "77ae221106e6"
+ "data_version": "243f4e91d42a"
 }
