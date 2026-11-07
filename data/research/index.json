@@ -1,0 +1,28 @@
+{
+ "run": "experiments/sparse_it_transfer_20261107T043621Z",
+ "sparse": "research/sparse/summary.json",
+ "workload": "research/workload/trace.json",
+ "domain": "research/domain/domain.json",
+ "sparse_cases": [
+  "400W_2LPM",
+  "400W_3LPM",
+  "500W_4LPM",
+  "600W_3LPM"
+ ],
+ "forecast_cases": [
+  "500W_4LPM",
+  "600W_3LPM"
+ ],
+ "basis": {
+  "file": "research/sparse/basis.f32",
+  "rows": 21,
+  "n_nodes": 5420,
+  "format": "float32 LE, row 0 = mean field (degC), rows 1..20 = POD modes"
+ },
+ "status_labels": [
+  "CFD evaluated",
+  "Experimentally evaluated",
+  "Prediction only",
+  "Proposed extension"
+ ]
+}
